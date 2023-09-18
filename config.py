@@ -26,19 +26,19 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")
-    API_HASH  = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+    API_ID    = os.environ.get("API_ID", "15037283")
+    API_HASH  = os.environ.get("API_HASH", "7af9d761267bf6b81ed07f942d87127f")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6321273116:AAHrNfJfEqmoRctaE92Q1QweC8WKcYHl1Qg") 
    
     # database config
-    DB_NAME = os.environ.get("DB_NAME","pyro-botz")     
-    DB_URL  = os.environ.get("DB_URL","")
+    DB_NAME = os.environ.get("DB_NAME","renamer")     
+    DB_URL  = os.environ.get("DB_URL","mongodb+srv://stark:stark@cluster0.9sxyrqb.mongodb.net/")
  
     # other configs
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC", "")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
-    FORCE_SUB   = os.environ.get("FORCE_SUB", "") 
+    START_PIC   = os.environ.get("START_PIC", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjGIJpLE-wIuhar8MKHsmCKeWtkX7U_yyID2e8sh8TNyARyLpOzrE5J4YTFig0QXRZgzI&usqp=CAU")
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '2043144248').split()]
+    FORCE_SUB   = os.environ.get("FORCE_SUB", None) 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", None))
 
     # wes response configuration     
