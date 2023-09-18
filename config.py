@@ -38,8 +38,8 @@ class Config(object):
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjGIJpLE-wIuhar8MKHsmCKeWtkX7U_yyID2e8sh8TNyARyLpOzrE5J4YTFig0QXRZgzI&usqp=CAU")
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '2043144248').split()]
-    FORCE_SUB   = os.environ.get("FORCE_SUB", None) 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", None))
+    FORCE_SUB   = os.environ.get("FORCE_SUB", "MarvelCloud") 
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001972153039"))
 
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
